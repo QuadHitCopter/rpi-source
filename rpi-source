@@ -257,7 +257,9 @@ def debian_method(fn):
 
     # Find first firmware entry in log (latest entries are at the top)
     print(type(debian_changelog))
-    print(type(r"firmware as of ([0-9a-fA-F]+)"))
+    asdagf = r"firmware as of ([0-9a-fA-F]+)"
+    print(type(asdagf))
+    print("update")
     fw_rev = re.search(r'firmware as of ([0-9a-fA-F]+)', debian_changelog)
     if not fw_rev:
         fail("Could not identify latest firmware revision")
