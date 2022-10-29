@@ -1,0 +1,10 @@
+Clonar repositorios  https://github.com/oshlab/esp8089 , https://github.com/notro/rpi-source
+modificar linea 111 de rpi-source de notro, ubicar parentesis except(*****, error) :
+modificar url de repositorio de rpi-source en archivo install de esp8089
+instalar manualmente urllib2 desde shell de RP
+
+edit import urllib2 linea  110 https://stackoverflow.com/questions/2792650/import-error-no-module-name-urllib2 
+
+16 125 236  https://askubuntu.com/questions/511650/cannot-install-python-module-urlparse  https://docs.python.org/3/library/urllib.parse.html
+
+installar arg y argparse: a mano pip install arg, argparse
