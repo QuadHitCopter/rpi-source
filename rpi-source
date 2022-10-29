@@ -285,6 +285,7 @@ def debian_method(fn):
 #
 def get_revision():
     revision = None
+    global e
     try:
         with io.open('/proc/device-tree/system/linux,revision', 'rb') as f:
             revision = hex(struct.unpack('>L', f.read(4))[0])[2:]
