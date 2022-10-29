@@ -12,7 +12,7 @@ import struct
 import sys
 import argparse
 import urllib
-import urllib2
+from urllib.request import urlopen
 import urlparse
 import gzip
 import subprocess
