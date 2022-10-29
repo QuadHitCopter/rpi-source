@@ -10,7 +10,8 @@ import io
 import os
 import struct
 import sys
-import argparse
+import arg
+
 import urllib
 from urllib.request import urlopen
 #import urlparse
@@ -234,7 +235,7 @@ def rpi_update_method(uri):
         fw_rev = f.read().strip()
     info("Firmware revision: %s" % fw_rev)
 
-    repo_short = urllib.parse(uri).path
+    repo_short = urlparse(uri).path
 
     repo_api = "https://api.github.com/repos%s" % repo_short
     repo_raw = "https://raw.githubusercontent.com%s" % repo_short
