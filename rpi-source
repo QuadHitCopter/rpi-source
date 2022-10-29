@@ -253,9 +253,11 @@ def debian_method(fn):
     info("Using: %s" % fn)
     with gzip.open(fn, 'rb') as f:
         debian_changelog = f.read()
-        print(debian_changelog)
+        
 
     # Find first firmware entry in log (latest entries are at the top)
+    print(type(debian_changelog))
+    print(r"firmware as of ([0-9a-fA-F]+)")
     fw_rev = re.search(r'firmware as of ([0-9a-fA-F]+)', debian_changelog)
     if not fw_rev:
         fail("Could not identify latest firmware revision")
